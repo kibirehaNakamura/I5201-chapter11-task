@@ -29,7 +29,7 @@ public class EX11_MeiboSearch {
 		ArrayList<String> arrayRawData = null;
 		try {
 			arrayRawData = dr.copyFromFileToArrayList(args[0]);
-		}catch(ArrayIndexOutOfBoundsException e) {
+		}catch(ArrayIndexOutOfBoundsException e) {	// 引数がない場合
 			System.out.println("引数にファイル名が入力されていません");
 			System.out.println("プログラムを終了します");
 			System.exit(1);
@@ -62,13 +62,13 @@ public class EX11_MeiboSearch {
 				System.out.println("生年月日で検索します");
 				searchContent = ki.readString("生年月日(年)");
 				String buf = ki.readString("生年月日(月)");
-				if(buf.length() < 2) {
-					buf = " " + buf;
+				if(buf.length() < 2) {	// 桁数が1なら
+					buf = " " + buf;	// 桁揃えにスペースを追加
 				}
 				searchContent = searchContent + buf;
 				buf = ki.readString("生年月日(日)");
-				if(buf.length() < 2) {
-					buf = " " + buf;
+				if(buf.length() < 2) {	// 桁数が1なら
+					buf = " " + buf;	// 桁揃えにスペースを追加
 				}
 				searchContent = searchContent + buf;
 				arrayHitRow = sh.searchByBirthday(arrayRawData, searchContent);

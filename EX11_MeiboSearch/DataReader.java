@@ -14,7 +14,7 @@ public class DataReader {
 	FileIn fi = new FileIn();
 	
 	/**
-	 * 引数で指定されたファイルのテキストを1行ずつArrayListに格納するメソッドです。
+	 * ファイルのテキストを1行ずつArrayListに格納するメソッドです。
 	 * 
 	 * @param fileName 読み込むファイルの名前
 	 * @return 読み込んだデータを格納したArrayList

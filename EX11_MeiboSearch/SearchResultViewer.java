@@ -16,7 +16,7 @@ public class SearchResultViewer {
 	StringEdit se = new StringEdit();
 	
 	/**
-	 * テキストを読み込んだArrayListと検索結果の行番号を格納したArrayListと検索に使用した文字列を受け取り、出席番号での検索結果を表示するメソッドです。
+	 * 出席番号での検索結果を表示するメソッドです。
 	 * 
 	 * @param arrayRawData  テキストから読み込んだデータを格納したArrayList
 	 * @param arrayHitRow   検索で合致した行番号を格納したArrayList
@@ -29,7 +29,7 @@ public class SearchResultViewer {
 		
 		System.out.println("出席番号　氏名　　　　　　　生年月日　　住所　");
 		System.out.println("--------　----------------　----------　------");
-		if(arrayHitRow.size() <= 0) {
+		if(arrayHitRow.size() <= 0) {	// 検索結果の件数が0なら
 			System.out.println("　　　　　　　　　該当者なし　　　　　　　　　");
 		} else {
 			for(int i = 0; i < arrayHitRow.size(); i++) {
@@ -58,7 +58,7 @@ public class SearchResultViewer {
 	}
 	
 	/**
-	 * テキストを読み込んだArrayListと検索結果の行番号を格納したArrayListと検索に使用した文字列を受け取り、名前での検索結果を表示するメソッドです。
+	 * 名前での検索結果を表示するメソッドです。
 	 * 
 	 * @param arrayRawData  テキストから読み込んだデータを格納したArrayList
 	 * @param arrayHitRow   検索で合致した行番号を格納したArrayList
@@ -71,7 +71,7 @@ public class SearchResultViewer {
 		
 		System.out.println("出席番号　氏名　　　　　　　生年月日　　住所　");
 		System.out.println("--------　----------------　----------　------");
-		if(arrayHitRow.size() <= 0) {
+		if(arrayHitRow.size() <= 0) {	// 検索結果の件数が0なら
 			System.out.println("　　　　　　　　　該当者なし　　　　　　　　　");
 		} else {
 			for(int i = 0; i < arrayHitRow.size(); i++) {
@@ -100,7 +100,7 @@ public class SearchResultViewer {
 	}
 	
 	/**
-	 * テキストを読み込んだArrayListと検索結果の行番号を格納したArrayListと検索に使用した文字列を受け取り、生年月日での検索結果を表示するメソッドです。
+	 * 生年月日での検索結果を表示するメソッドです。
 	 * 
 	 * @param arrayRawData  テキストから読み込んだデータを格納したArrayList
 	 * @param arrayHitRow   検索で合致した行番号を格納したArrayList
@@ -116,7 +116,7 @@ public class SearchResultViewer {
 		
 		System.out.println("出席番号　氏名　　　　　　　生年月日　　住所　");
 		System.out.println("--------　----------------　----------　------");
-		if(arrayHitRow.size() <= 0) {
+		if(arrayHitRow.size() <= 0) {	// 検索結果の件数が0なら
 			System.out.println("　　　　　　　　　該当者なし　　　　　　　　　");
 		} else {
 			for(int i = 0; i < arrayHitRow.size(); i++) {
