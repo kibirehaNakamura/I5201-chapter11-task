@@ -6,7 +6,7 @@ import java.nio.file.Paths;
  * データの読み取りを行うメソッドをまとめたクラスです。
  * 
  */
-public class DataRead {
+public class DataReader {
 	/**
 	 * ファイル読み込みのためのFileInインスタンスを生成します。
 	 * 
@@ -19,7 +19,7 @@ public class DataRead {
 	 * @param fileName 読み込むファイルの名前
 	 * @return 読み込んだデータを格納したArrayList
 	 */
-	public ArrayList<String> copyFileToArrayList(String fileName) {
+	public ArrayList<String> copyFromFileToArrayList(String fileName) {
 		/* ファイルの存在確認 */
 		if(!Files.exists(Paths.get(fileName))) {
 			System.out.println("指定されたファイルが見つかりません");
@@ -28,8 +28,8 @@ public class DataRead {
 		}
 		
 		/* ファイルオープン */
-		boolean flag = fi.open(fileName);
-		if(flag == false) {
+		boolean fileOperationFlag = fi.open(fileName);
+		if(fileOperationFlag == false) {
 			System.out.println("ファイルオープンエラー");
 			System.out.println("プログラムを終了します");
 			System.exit(1);
@@ -46,8 +46,8 @@ public class DataRead {
 		}
 		
 		/* ファイルクローズ */
-		flag = fi.close();
-		if(flag == false) {
+		fileOperationFlag = fi.close();
+		if(fileOperationFlag == false) {
 			System.out.println("ファイルクローズエラー");
 			System.out.println("プログラムを終了します");
 			System.exit(1);

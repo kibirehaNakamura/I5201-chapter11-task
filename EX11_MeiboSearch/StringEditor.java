@@ -4,7 +4,7 @@ import java.util.ArrayList;
  * 文字列を加工するメソッドをまとめたクラスです。
  * 
  */
-public class StringEdit {
+public class StringEditor {
 	/**
 	 * 文字列と複数のインデックスの数値を受け取り、文字列をカンマで分割した後指定されたインデックスの場所の文字列をArrayListに格納して返します。
 	 * 

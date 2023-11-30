@@ -4,12 +4,12 @@ import java.util.ArrayList;
  * 検索を行うメソッドをまとめたクラスです。
  * 
  */
-public class Search {
+public class Searcher {
 	/**
 	 * 文字列の加工を行うStringEditクラスを読み込みます。
 	 * 
 	 */
-	StringEdit se = new StringEdit();
+	StringEditor se = new StringEditor();
 	
 	/**
 	 * テキストを書き出したArrayListと検索する出席番号の文字列を受け取り、合致する行番号を格納したArrayListを返すメソッドです。

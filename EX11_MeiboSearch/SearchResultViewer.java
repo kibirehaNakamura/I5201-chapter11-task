@@ -4,7 +4,7 @@ import java.util.ArrayList;
  * 検索結果を表示するメソッドをまとめたクラスです。
  * 
  */
-public class ShowResult {
+public class SearchResultViewer {
 	/**
 	 * 各種インスタンスを生成します。
 	 * KeyIn キー入力を処理するクラス
@@ -107,9 +107,9 @@ public class ShowResult {
 	 * @param searchContent 検索に使用した文字列
 	 */
 	public void showSearchResultByBirthday(ArrayList<String> arrayRawData, ArrayList<Integer> arrayHitRow, String searchContent) {
-		StringBuilder sb = new StringBuilder(searchContent);
-		sb.insert(4, ".");
-		sb.insert(7, ".");
+		StringBuilder sb = new StringBuilder(searchContent);	// 文字列に文字を挿入するためにStringBuilderを使用
+		sb.insert(4, ".");	// 年と月の間
+		sb.insert(7, ".");	// 月と日の間に"."を挿入
 		System.out.println();
 		System.out.println("名簿データ検索表示 (" + dt.getCurrentDateTime("yyyy.MM.dd現在") + ")");
 		System.out.println("(検索条件 = 生年月日:" + sb.toString() + "、結果件数 = " + arrayHitRow.size() + "件)");

@@ -11,13 +11,13 @@ public class EX11_MeiboSearch {
 	 * DataRead テキストファイルを読み込むクラス
 	 * Search 検索処理を行うクラス
 	 * DateTime 日時に関する処理を行うクラス
-	 * ShowResult 検索結果の表示を行うクラス
+	 * SearchResultViewer 検索結果の表示を行うクラス
 	 * KeyIn キー入力処理を行うクラス
 	 */
-	static DataRead dr = new DataRead();
-	static Search sh = new Search();
+	static DataReader dr = new DataReader();
+	static Searcher sh = new Searcher();
 	static DateTime dt = new DateTime();
-	static ShowResult sr = new ShowResult();
+	static SearchResultViewer srv = new SearchResultViewer();
 	static KeyIn ki = new KeyIn();
 	
 	/**
@@ -28,7 +28,7 @@ public class EX11_MeiboSearch {
 		/* ファイルを読み込む */
 		ArrayList<String> arrayRawData = null;
 		try {
-			arrayRawData = dr.copyFileToArrayList(args[0]);
+			arrayRawData = dr.copyFromFileToArrayList(args[0]);
 		}catch(ArrayIndexOutOfBoundsException e) {
 			System.out.println("引数にファイル名が入力されていません");
 			System.out.println("プログラムを終了します");
@@ -47,7 +47,7 @@ public class EX11_MeiboSearch {
 				System.out.println("出席番号で検索します");
 				searchContent = ki.readString("出席番号");
 				arrayHitRow = sh.searchByNumber(arrayRawData, searchContent);
-				sr.showSearchResultByNumber(arrayRawData, arrayHitRow, searchContent);
+				srv.showSearchResultByNumber(arrayRawData, arrayHitRow, searchContent);
 				break;
 				
 			case "2":	// 名前で検索
@@ -55,7 +55,7 @@ public class EX11_MeiboSearch {
 				searchContent = ki.readString("苗字");
 				searchContent = searchContent + (ki.readString("名前"));
 				arrayHitRow = sh.searchByName(arrayRawData, searchContent);
-				sr.showSearchResultByName(arrayRawData, arrayHitRow, searchContent);
+				srv.showSearchResultByName(arrayRawData, arrayHitRow, searchContent);
 				break;
 				
 			case "3":	// 生年月日で検索
@@ -72,7 +72,7 @@ public class EX11_MeiboSearch {
 				}
 				searchContent = searchContent + buf;
 				arrayHitRow = sh.searchByBirthday(arrayRawData, searchContent);
-				sr.showSearchResultByBirthday(arrayRawData, arrayHitRow, searchContent);
+				srv.showSearchResultByBirthday(arrayRawData, arrayHitRow, searchContent);
 				break;
 				
 			case "Q":	// 終了
