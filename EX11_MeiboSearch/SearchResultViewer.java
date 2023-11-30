@@ -18,7 +18,7 @@ public class SearchResultViewer {
 	/**
 	 * 出席番号での検索結果を表示するメソッドです。
 	 * 
-	 * @param arrayRawData  テキストから読み込んだデータを格納したArrayList
+	 * @param arrayRawData  テキストから読み込んだ行ごとの未加工の文字列を格納したArrayList
 	 * @param arrayHitRow   検索で合致した行番号を格納したArrayList
 	 * @param searchContent 検索に使用した文字列
 	 */
@@ -60,7 +60,7 @@ public class SearchResultViewer {
 	/**
 	 * 名前での検索結果を表示するメソッドです。
 	 * 
-	 * @param arrayRawData  テキストから読み込んだデータを格納したArrayList
+	 * @param arrayRawData  テキストから読み込んだ行ごとの未加工の文字列を格納したArrayList
 	 * @param arrayHitRow   検索で合致した行番号を格納したArrayList
 	 * @param searchContent 検索に使用した文字列
 	 */
@@ -102,7 +102,7 @@ public class SearchResultViewer {
 	/**
 	 * 生年月日での検索結果を表示するメソッドです。
 	 * 
-	 * @param arrayRawData  テキストから読み込んだデータを格納したArrayList
+	 * @param arrayRawData  テキストから読み込んだ行ごとの未加工の文字列を格納したArrayList
 	 * @param arrayHitRow   検索で合致した行番号を格納したArrayList
 	 * @param searchContent 検索に使用した文字列
 	 */
