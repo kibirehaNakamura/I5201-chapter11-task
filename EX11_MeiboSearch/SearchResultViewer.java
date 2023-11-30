@@ -13,7 +13,7 @@ public class SearchResultViewer {
 	 */
 	KeyIn ki = new KeyIn();
 	DateTime dt = new DateTime();
-	StringEdit se = new StringEdit();
+	StringEditor se = new StringEditor();
 	
 	/**
 	 * 出席番号での検索結果を表示するメソッドです。
