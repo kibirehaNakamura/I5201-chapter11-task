@@ -19,3 +19,5 @@
 - ArrayList
 - String.splitメソッド
 - StringBuilderクラス
+- Files.existsメソッド
+- Paths.getメソッド
