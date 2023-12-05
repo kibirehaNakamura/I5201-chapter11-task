@@ -12,7 +12,7 @@ public class Searcher {
 	StringEditor se = new StringEditor();
 	
 	/**
-	 * 入力された出席番号と合致する行の番号を格納したArrayListを返すメソッドです。
+	 * 入力された出席番号と合致する行を検索するメソッドです。
 	 * 
 	 * @param arrayRawData  テキストを読み出したデータの入ったArrayList
 	 * @param searchContent 検索に使用する出席番号の文字列
@@ -32,7 +32,7 @@ public class Searcher {
 	}
 	
 	/**
-	 * 入力された名前と合致する行の番号を格納したArrayListを返すメソッドです。
+	 * 入力された名前と合致する行を検索するメソッドです。
 	 * 
 	 * @param arrayRawData  テキストを読み出したデータの入ったArrayList
 	 * @param searchContent 検索に使用する名前の文字列
@@ -52,7 +52,7 @@ public class Searcher {
 	}
 	
 	/**
-	 * 入力された生年月日と合致する行の番号を格納したArrayListを返すメソッドです。
+	 * 入力された生年月日と合致する行を検索するメソッドです。
 	 * 
 	 * @param arrayRawData  テキストを読み出したデータの入ったArrayList
 	 * @param searchContent 検索に使用する生年月日の文字列

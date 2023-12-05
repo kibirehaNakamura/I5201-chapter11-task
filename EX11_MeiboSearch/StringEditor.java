@@ -6,7 +6,7 @@ import java.util.ArrayList;
  */
 public class StringEditor {
 	/**
-	 * 文字列をカンマで分割した後指定されたインデックスの場所の文字列をArrayListに格納して返すメソッドです。
+	 * 文字列をカンマで分割した後、指定されたインデックスの場所の文字列をArrayListに格納して返すメソッドです。
 	 * 
 	 * @return 指定されたインデックスの個数分の文字列が格納されたArrayList
 	 */

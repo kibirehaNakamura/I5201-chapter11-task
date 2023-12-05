@@ -40,12 +40,12 @@ public class SearchResultViewer {
 				System.out.print(buf.substring(0,8) + "　");
 				System.out.print(arrayResult.get(3) + ".");	// 生年(半角4桁)
 				buf = arrayResult.get(4);	// 月(半角2桁)
-				if(buf.length() < 2) {
+				if(buf.length() < 2) {	// 1桁の場合桁揃えにスペースを追加
 					buf = " " + buf;
 				}
 				System.out.print(buf + ".");
 				buf = arrayResult.get(5);	// 日(半角2桁)
-				if(buf.length() < 2) {
+				if(buf.length() < 2) {	// 1桁の場合桁揃えにスペースを追加
 					buf = " " + buf;
 				}
 				System.out.print(buf + "　");
@@ -82,12 +82,12 @@ public class SearchResultViewer {
 				System.out.print(buf.substring(0,8) + "　");
 				System.out.print(arrayResult.get(3) + ".");	// 生年(半角4桁)
 				buf = arrayResult.get(4);	// 月(半角2桁)
-				if(buf.length() < 2) {
+				if(buf.length() < 2) {	// 1桁の場合桁揃えにスペースを追加
 					buf = " " + buf;
 				}
 				System.out.print(buf + ".");
 				buf = arrayResult.get(5);	// 日(半角2桁)
-				if(buf.length() < 2) {
+				if(buf.length() < 2) {	// 1桁の場合桁揃えにスペースを追加
 					buf = " " + buf;
 				}
 				System.out.print(buf + "　");
@@ -108,7 +108,7 @@ public class SearchResultViewer {
 	 */
 	public void showSearchResultByBirthday(ArrayList<String> arrayRawData, ArrayList<Integer> arrayHitRow, String searchContent) {
 		StringBuilder sb = new StringBuilder(searchContent);	// 文字列に文字を挿入するためにStringBuilderを使用
-		sb.insert(4, ".");	// 年と月の間
+		sb.insert(4, ".");	// 年と月の間に"."を挿入
 		sb.insert(7, ".");	// 月と日の間に"."を挿入
 		System.out.println();
 		System.out.println("名簿データ検索表示 (" + dt.getCurrentDateTime("yyyy.MM.dd現在") + ")");
@@ -127,12 +127,12 @@ public class SearchResultViewer {
 				System.out.print(buf.substring(0,8) + "　");
 				System.out.print(arrayResult.get(3) + ".");	// 生年(半角4桁)
 				buf = arrayResult.get(4);	// 月(半角2桁)
-				if(buf.length() < 2) {
+				if(buf.length() < 2) {	// 1桁の場合桁揃えにスペースを追加
 					buf = " " + buf;
 				}
 				System.out.print(buf + ".");
 				buf = arrayResult.get(5);	// 日(半角2桁)
-				if(buf.length() < 2) {
+				if(buf.length() < 2) {	// 1桁の場合桁揃えにスペースを追加
 					buf = " " + buf;
 				}
 				System.out.print(buf + "　");
